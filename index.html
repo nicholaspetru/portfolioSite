@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>~Nick Petru~</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i> Navigate</a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top"  onclick = $("#menu-close").click(); >Contents</a>
+            </li>
+            <li>
+                <a href="#top" onclick = $("#menu-close").click(); >Top</a>
+            </li>
+            <li>
+                <a href="#about" onclick = $("#menu-close").click(); >About</a>
+            </li>
+            <li>
+                <a href="#services" onclick = $("#menu-close").click(); >Experience</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick = $("#menu-close").click(); >Education</a>
+            </li>
+            <li>
+                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Nick Petru</h1>
+            <h3>Software Engineer</h3>
+            <br>
+            <a href="#about" class="btn btn-dark btn-lg">About Me</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Let me create something with you</h2>
+                    <p class="lead">Developer.  Photographer. Musicologist. Amateur Chef. Backpacker. Linguist. Friend. </p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Experience</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code-fork fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4 id="ADTitle">
+                                    <strong>ADTeach</strong>
+                                </h4>
+                                <p>Senior Thesis Project at Carleton</p>
+                                <a href="#ADTitle" class="btn btn-light" onClick="showAndHide('ADTeach',['Racket', 'OCS', 'PipelineMSP'])">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-terminal fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4 id="RackeTitle">
+                                    <strong>Racket Interpreter</strong>
+                                </h4>
+                                <p>Programming Languages Project</p>
+                                <a href="#RackeTitle" class="btn btn-light" onClick="showAndHide('Racket',['ADTeach', 'OCS', 'PipelineMSP'])">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-newspaper-o fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4 id="PipeTitle">
+                                    <strong>Pipeline MSP</strong>
+                                </h4>
+                                <p>Managing Editor and Front End Lead</p>
+                                <a href="#PipeTitle" class="btn btn-light" onClick="showAndHide('PipelineMSP',['Racket', 'OCS', 'ADTeach'])">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-globe fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4 id="OCSTitle">
+                                    <strong>Carleton OCS</strong>
+                                </h4>
+                                <p>Web Site Coordinator</p>
+                                <a href="#OCSTitle" class="btn btn-light" onClick="showAndHide('OCS',['Racket', 'ADTeach', 'PipelineMSP'])">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Callout -->
+    <aside class="callout">
+        <div class="text-vertical-center">
+            <div id="ADTeach">
+                <h1>ADTeach</h1>
+                <h3>Carleton College, 2014-2015</h3>
+                <ul id="ADTlist" class="list">
+                    <li>Project description: a web app that allows students to code in an integrated programming environment and step through the code as the app animates the visual representations of all the ADTs and variables in the program and how those ADTs' states change and interact</li>
+                    <li>Implemented the following with JavaScript (JQuery and Raphaël.js), CSS, and HTML</li>
+                    <li>Investigated and designed the system MVC architecture and set up its implementation in a website</li>
+                    <li>Developed a system to organize animations in order to make the web app more comprehensive</li>
+                    <li>Designed a JavaScript template to facilitate implementation of similar data structure visuals</li>
+                    <li>Animated various ADT and primitive actions</li>
+                </ul>
+                <a href="http://cs.carleton.edu/cs_comps/1415/jadrian2/final-results/index.html" class="btn btn-light">View Project Site</a>
+            </div>
+            <div id="Racket">
+                <h1>Racket Interpreter</h1>
+                <h3> Carleton College, 2014</h3>
+                <ul id="RacketList" class="list">
+                    <li>Co-wrote a Racket interpreter in C</li>
+                    <li>Partitioned the interpreter into manageable, smaller projects and distributed these sections amongst team of three</li>
+                    <li>Met frequently to update and educate teammates on progress and modify problematic architecture</li>
+                </ul>
+            </div>
+            <div id="PipelineMSP">
+                <h1>Pipeline MSP</h1>
+                <h3>Managing Editor and Front End Lead, 2013</h3>
+                <ul id="PipelineList" class="list">
+                    <li>Co-created Pipeline MSP, a nonprofit dedicated to researching, and promoting little known entrepreneurs and startups in the Minnesota business community that deserve a bigger break</li>
+                    <li>Met with local investors and entrepreneurs to arrange Pipeline MSP funding and outreach</li>
+                    <li>Determined Pipeline MSP technical and media needs and built a website to support our processes</li>
+                    <li>Maintained the website styling and functionality</li>
+                    <li>Managed social media and integrated multimedia supplements</li>
+                    <li>Interviewed and consulted with the CoCo (Twin Cities based coworking space) members, wrote ten articles, and edited coworkers’ material</li>
+                </ul>
+            </div>
+            <div id="OCS">
+                <h1>Carleton College Off-Campus Studies</h1>
+                <h3>Web Site Coordinator, 2014</h3>
+                <ul id="OCSList" class="list">
+                    <li>Launched a user application and petition processes on a web-based platform (StudioAbroad by Terradotta)</li>
+                    <li>Enabled varying access to existing student and faculty accounts</li>
+                    <li>Provided technical support to users during the application platform transition</li>
+                    <li>Designed Carleton Off-Campus Studies program brochures with Adobe InDesign</li>
+                    <li>Improved presentation and layout of program information and navigability of existing OCS website</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>Education</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6" style="">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/CarLogo.png" style="opacity: 0.4; filter: alpha(opacity=40); width: 50%; height:auto;">
+                                </a>
+                            </div>
+                        </div>
+                        <div id="GradInfo" style="vertical-align:middle;">
+                            <h3>Carleton College</h3>
+                            <p>Graduated June, 2015 with a B.A. in Computer Science
+                            </p>
+                            <p class="list"> <a href="https://apps.carleton.edu/curricular/cs/courses/" style="float:left;">Related Coursework:</a></p>
+                            <p style="text-align:left;"> <br>Data Structures, Software Design, Algorithms, Computer Organization and Architecture, Computability and Complexity, Programming Language Design and Implementation, Data Mining, Evolutionary Computing and Artificial Life</p> 
+                        </div>
+
+                        <div id="addInfo" class="col-lg-10 col-lg-offset-1 text-center" style="float:left; text-align: left;">
+                            <div class="col-md-6" style="">
+                                <div class="portfolio-item">
+                                    <a href="#">
+                                        <img class="img-portfolio img-responsive" src="img/spanish_flag.jpg" style="opacity: 0.4; filter: alpha(opacity=40); width: 75%; height:auto; float:left;">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-10 col-lg-offset-1 text-center">
+                                <h2>Skills</h2>
+                                <hr class="small">
+                                <ul style="float:left; text-align: left;">
+                                    <li> <strong>Experienced in:</strong> Python, Java, HTML, Javascript, CSS</li>
+                                    <li> <strong>Proficient in:</strong> C, Racket, JQuery, AngularJS, RaphaelJS</li>
+                                    <li>Strong research and analytical skills</li>
+                                    <li>Experience assisting non-technical customers/clients with technical media</li>
+                                    <li>Passable Spanish speaker</li>
+                                    <li>Deft photographic trigger finger</li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <h4> <strong>Spanish Studies in Madrid</strong>, Carleton College<br>Madrid, ES, 2013</h4>
+                            </div>
+                            <div class="col-md-6" style="">
+                                <div class="portfolio-item">
+                                    <a href="#">
+                                        <img class="img-portfolio img-responsive" src="img/HR.jpg" style="opacity: 0.4; filter: alpha(opacity=40); width: 45%; height:auto; padding-top: 10%">
+                                    </a>
+                                </div>
+                            </div>
+                            <div style="padding-top: 5%">
+                                <h4><strong>Head Royce High School</strong><br>Oakland, CA, 2007-2011</h4>
+                            </div>
+                        </div>
+                </div>
+                <!-- /.row (nested) -->
+                    <a href="#portfolio" id="moreExp" class="btn btn-dark" onClick="expand()">View More Items</a>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+          
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div id="contactText" class="col-lg-10 col-lg-offset-1 text-center">
+                    <h3><strong>Get In Touch</strong></h3>
+                    <p><strong>I'm in: </strong> Oakland, CA</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> (510) 499-9636</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:nicholaspetru@gmail.com">nicholaspetru@gmail.com</a>
+                        </li>
+                        <li><i class="fa fa-linkedin"></i><a href="http://www.linkedin.com/in/nicholaspetru">LinkedIn</a></li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Nick's Website 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>Up up and away!</h3>
+                    <a href="#" class="btn btn-lg btn-light">Ascend</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Angular.js 
+    <script src="js/angular.js"></script> -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Extra Scripts -->
+    <script src="js/siteApp.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+</body>
+
+</html>
