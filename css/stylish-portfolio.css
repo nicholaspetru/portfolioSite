@@ -13,8 +13,7 @@ body {
 }
 
 body {
-    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
+    font-family: 'Hind Siliguri', sans-serif;}
 
 .text-vertical-center {
     display: table-cell;
@@ -167,7 +166,8 @@ hr.small {
 }
 
 .header h1 {
-    color: #337ab7;
+    color: #9BAAAA;
+    font-size: 120px;
 }
 
 .header h3 {
