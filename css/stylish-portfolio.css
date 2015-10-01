@@ -166,18 +166,26 @@ hr.small {
 }
 
 .header h1 {
-    color: #9BAAAA;
-    font-size: 120px;
+    color: #black;
+    font-size: 100px;
 }
 
 .header h3 {
     color: white;
 }
+
+.header a:hover{
+    color:black;
+    background-color:white;
+}
+
 /* About */
 
 .about {
     padding: 20px 0;
 }
+
+
 
 /* Services */
 
