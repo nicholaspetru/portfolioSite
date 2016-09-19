@@ -9,17 +9,23 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Nick Petru</title>
+    <title>~Nick Petru~</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="scss/output.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Hind+Siliguri:400,300,500' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -27,15 +33,12 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="icon" type="image/png" href="img/favicomatic/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="img/favicomatic/favicon-16x16.png" sizes="16x16" />
-
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i> Navigate</a>
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -75,8 +78,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p></p>
-                    <p class="lead">Developer • Web Designer • Photographer • Musicologist • Amateur Chef • Backpacker • Linguist • Friend </p>
+                    <h2>Let me create something with you</h2>
+                    <p class="lead">Developer.  Photographer. Musicologist. Amateur Chef. Backpacker. Linguist. Friend. </p>
                 </div>
             </div>
             <!-- /.row -->
@@ -93,56 +96,69 @@
                     <h2>Experience</h2>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6">
+                        <div data-toggle="#ascendify" class="expToggle col-1-5">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-code-fork fa-stack-1x text-primary"></i>
-                            </span>
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-users fa-stack-1x text-primary"></i>
+                                </span>
+                                <h4 id="asc_title">
+                                    <strong>Ascendify</strong>
+                                </h4>
+                                <p>Web Developer</p><br />
+                                <a href="#asc_title" class="btn btn-light" onClick="showAndHide('ascendify')">Learn More</a>
+                            </div>
+                        </div>
+                        <div data-toggle="#ADTeach" class="expToggle col-1-5">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-code-fork fa-stack-1x text-primary"></i>
+                                </span>
                                 <h4 id="ADTitle">
                                     <strong>ADTeach</strong>
                                 </h4>
-                                <p>Senior Thesis Project at Carleton</p>
-                                <a href="#ADTitle" class="btn btn-light" onClick="showAndHide('ADTeach',['Racket', 'OCS', 'PipelineMSP'])">Learn More</a>
+                                <p>Senior Thesis Project<br />at Carleton</p>
+                                <a href="#ADTitle" class="btn btn-light" onClick="showAndHide('ADTeach')">Learn More</a>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div data-toggle="#Racket" class="expToggle col-1-5">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-terminal fa-stack-1x text-primary"></i>
-                            </span>
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-terminal fa-stack-1x text-primary"></i>
+                                </span>
                                 <h4 id="RackeTitle">
                                     <strong>Racket Interpreter</strong>
                                 </h4>
-                                <p>Programming Languages Project</p>
-                                <a href="#RackeTitle" class="btn btn-light" onClick="showAndHide('Racket',['ADTeach', 'OCS', 'PipelineMSP'])">Learn More</a>
+                                <p>Programming Languages<br />Project</p>
+                                <a href="#RackeTitle" class="btn btn-light" onClick="showAndHide('Racket')">Learn More</a>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div data-toggle="#PipelineMSP" class="expToggle col-1-5">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-newspaper-o fa-stack-1x text-primary"></i>
-                            </span>
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-newspaper-o fa-stack-1x text-primary"></i>
+                                </span>
                                 <h4 id="PipeTitle">
                                     <strong>Pipeline MSP</strong>
                                 </h4>
-                                <p>Managing Editor and Front End Lead</p>
-                                <a href="#PipeTitle" class="btn btn-light" onClick="showAndHide('PipelineMSP',['Racket', 'OCS', 'ADTeach'])">Learn More</a>
+                                <p>Managing Editor<br /> and Web Lead</p>
+                                <a href="#PipeTitle" class="btn btn-light" onClick="showAndHide('PipelineMSP')">Learn More</a>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div data-toggle="#OCS" class="expToggle col-1-5">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-globe fa-stack-1x text-primary"></i>
-                            </span>
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-globe fa-stack-1x text-primary"></i>
+                                </span>
                                 <h4 id="OCSTitle">
                                     <strong>Carleton OCS</strong>
                                 </h4>
-                                <p>Web Site Coordinator</p>
-                                <a href="#OCSTitle" class="btn btn-light" onClick="showAndHide('OCS',['Racket', 'ADTeach', 'PipelineMSP'])">Learn More</a>
+                                <p>Web Site<br />Coordinator</p>
+                                <a href="#OCSTitle" class="btn btn-light" onClick="showAndHide('OCS')">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -156,55 +172,12 @@
     </section>
 
     <!-- Callout -->
-    <aside class="callout">
-        <div class="text-vertical-center">
-            <div id="ADTeach">
-                <h2>ADTeach</h2>
-                <h3>Carleton College, 2014-2015</h3>
-                <ul id="ADTlist" class="list">
-                    <li>Project description: a web app that allows students to code in an integrated programming environment and step through the code as the app animates the visual representations of all the ADTs and variables in the program and how those ADTs' states change and interact</li>
-                    <li>Implemented the following with JavaScript (JQuery and Raphaël.js), CSS, and HTML</li>
-                    <li>Investigated and designed the system MVC architecture and set up its implementation in a website</li>
-                    <li>Developed a system to organize animations in order to make the web app more comprehensive</li>
-                    <li>Designed a JavaScript template to facilitate implementation of similar data structure visuals</li>
-                    <li>Animated various ADT and primitive actions</li>
-                </ul>
-                <a href="http://cs.carleton.edu/cs_comps/1415/jadrian2/final-results/index.html" class="btn btn-light">View Project Site</a>
+    <section id="expDescriptions">
+        <aside class="callout">
+            <div class="text-vertical-center">
             </div>
-            <div id="Racket">
-                <h2>Racket Interpreter</h2>
-                <h3> Carleton College, 2014</h3>
-                <ul id="RacketList" class="list">
-                    <li>Co-wrote a Racket interpreter in C</li>
-                    <li>Partitioned the interpreter into manageable, smaller projects and distributed these sections amongst team of three</li>
-                    <li>Met frequently to update and educate teammates on progress and modify problematic architecture</li>
-                </ul>
-            </div>
-            <div id="PipelineMSP">
-                <h2>Pipeline MSP</h2>
-                <h3>Managing Editor and Front End Lead, 2013</h3>
-                <ul id="PipelineList" class="list">
-                    <li>Co-created Pipeline MSP, a nonprofit dedicated to researching, and promoting little known entrepreneurs and startups in the Minnesota business community that deserve a bigger break</li>
-                    <li>Met with local investors and entrepreneurs to arrange Pipeline MSP funding and outreach</li>
-                    <li>Determined Pipeline MSP technical and media needs and built a website to support our processes</li>
-                    <li>Maintained the website styling and functionality</li>
-                    <li>Managed social media and integrated multimedia supplements</li>
-                    <li>Interviewed and consulted with the CoCo (Twin Cities based coworking space) members, wrote ten articles, and edited coworkers’ material</li>
-                </ul>
-            </div>
-            <div id="OCS">
-                <h2>Carleton College Off-Campus Studies</h2>
-                <h3>Web Site Coordinator, 2014</h3>
-                <ul id="OCSList" class="list">
-                    <li>Launched a user application and petition processes on a web-based platform (StudioAbroad by Terradotta)</li>
-                    <li>Enabled varying access to existing student and faculty accounts</li>
-                    <li>Provided technical support to users during the application platform transition</li>
-                    <li>Designed Carleton Off-Campus Studies program brochures with Adobe InDesign</li>
-                    <li>Improved presentation and layout of program information and navigability of existing OCS website</li>
-                </ul>
-            </div>
-        </div>
-    </aside>
+        </aside>
+    </section>
 
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
@@ -229,54 +202,43 @@
                             <p style="text-align:left;"> <br>Data Structures, Software Design, Algorithms, Computer Organization and Architecture, Computability and Complexity, Programming Language Design and Implementation, Data Mining, Evolutionary Computing and Artificial Life</p> 
                         </div>
 
-                        <div class="col-lg-10 col-lg-offset-1 text-center" style="padding-bottom:40px;">
-                            <h2>Skills</h2>
-                            <hr class="small">
-                            <ul style="float:; text-align: left;">
-                                <li> <strong>Experienced in:</strong> CSS, Git, HTML, Java, JavaScript, Python</li>
-                                <li> <strong>Proficient in:</strong> 
-                                    AngularJS, C, JQuery, Racket, RaphaelJS</li>
-                                <li>Strong research and analytical skills</li>
-                                <li>Experience assisting non-technical customers/clients with technical media</li>
-                                <li>Conversational Spanish speaker</li>
-                                <li>Deft photographic trigger finger</li>
-                            </ul>
-                        </div>
-
-                        
                         <div id="addInfo" class="col-lg-10 col-lg-offset-1 text-center" style="float:left; text-align: left;">
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="portfolio-item">
-                                        <a href="#">
-                                            <img class="img-portfolio img-responsive" src="img/spanish_flag.jpg" style="opacity: 0.4; filter: alpha(opacity=40); width: 75%; height:auto; float:left;">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <h4> <strong>Spanish Studies in Madrid</strong>, Carleton College<br>Madrid, ES, 2013</h4>
+                            <div class="col-md-6" style="">
+                                <div class="portfolio-item">
+                                    <a href="#">
+                                        <img class="img-portfolio img-responsive" src="img/spanish_flag.jpg" style="opacity: 0.4; filter: alpha(opacity=40); width: 75%; height:auto; float:left;">
+                                    </a>
                                 </div>
                             </div>
-                            
+                            <div class="col-lg-10 col-lg-offset-1 text-center">
+                                <h2>Skills</h2>
+                                <hr class="small">
+                                <ul style="float:left; text-align: left;">
+                                    <li><strong>Experienced in:</strong> Python, Java, HTML, Javascript, jQuery, CSS, SASS</li>
+                                    <li><strong>Proficient in:</strong> C, Racket, PHP, ReactJS, AngularJS, RaphaelJS</li>
+                                    <li>Strong research and analytical skills</li>
+                                    <li>Experience assisting non-technical customers/clients with technical media</li>
+                                    <li>Passable Spanish speaker</li>
+                                    <li>Deft photographic trigger finger</li>
+                                </ul>
+                            </div>
                             <div class="row">
-                                <div class="col-md-6" style="">
-                                    <div class="portfolio-item">
-                                        <a href="#">
-                                            <img class="img-portfolio img-responsive" src="img/HR.jpg" style="opacity: 0.4; filter: alpha(opacity=40); width: 45%; height:auto; padding-top: 10%">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div style="padding-top: 5%; float:left;">
-                                    <h4><strong>Head Royce High School</strong><br>Oakland, CA, 2007-2011</h4>
+                                <h4> <strong>Spanish Studies in Madrid</strong>, Carleton College<br>Madrid, ES, 2013</h4>
+                            </div>
+                            <div class="col-md-6" style="">
+                                <div class="portfolio-item">
+                                    <a href="#">
+                                        <img class="img-portfolio img-responsive" src="img/HR.jpg" style="opacity: 0.4; filter: alpha(opacity=40); width: 45%; height:auto; padding-top: 10%">
+                                    </a>
                                 </div>
                             </div>
-                            
+                            <div style="padding-top: 5%">
+                                <h4><strong>Head Royce High School</strong><br>Oakland, CA, 2007-2011</h4>
+                            </div>
                         </div>
                 </div>
                 <!-- /.row (nested) -->
-                    <a id="moreExp" class="btn btn-dark" onClick="expand()">View More Items</a>
+                    <a href="#portfolio" id="moreExp" class="btn btn-dark" onClick="expand()">View More Items</a>
                 <!-- /.col-lg-10 -->
             </div>
             <!-- /.row -->
@@ -318,11 +280,11 @@
     </footer>
 
     <!-- Call to Action -->
-    <aside class="call-to-action bg-primary" style="padding: 0px;">
+    <aside class="call-to-action bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <a id="ascend" href="" class="btn btn-lg btn-light" >Ascend</a>
+                    <a onclick="$('html, body').animate({ scrollTop: 0 }, 'easeInOut');" class="btn btn-lg btn-light">Ascend</a>
                 </div>
             </div>
         </div>
@@ -354,12 +316,6 @@
         $("#sidebar-wrapper").toggleClass("active");
     });
 
-    // Scrolls smoothly to top
-    $("#ascend").click(function() {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-        return false;
-    });
-
     // Scrolls to the selected menu item on the page
     $(function() {
         $('a[href*=#]:not([href=#])').click(function() {
@@ -375,6 +331,10 @@
                 }
             }
         });
+    });
+
+    $(document).ready(function() {
+        expHoverDisplay('.expToggle');
     });
     </script>
 

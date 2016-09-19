@@ -2,13 +2,18 @@
 
 var eduExpand = false;
 
-function showAndHide(objMain, objList) {
-	for (o = 0; o < (objList.length); o++){
-	    var el = document.getElementById(objList[o]);
-		el.style.display = 'none';
-	}
-	var newEl = document.getElementById(objMain);
-	newEl.style.display = 'block';
+function showAndHide(currExp) {
+	var experienceList = ['#ascendify', '#ADTeach', '#Racket', '#OCS', '#PipelineMSP'];
+	$.each(experienceList, function(index, value) {
+		(value == currExp) ? loadExperience( "#expDescriptions aside div", value ) : $( value ).css('display', 'none');
+	});
+	
+}
+
+function loadExperience(container, selector) {
+	ajaxExpLoad( container, selector );
+	// $( container ).load( "supplement.html " + selector );
+	$( container + selector ).css( 'display', 'block' );
 }
 
 function expand() {
@@ -18,12 +23,24 @@ function expand() {
 	if(eduExpand){
 		addInfo.style.display = 'none';
 		btn.innerHTML = "View More Items";
-		eduExpand=false;
+		eduExpand = false;
 	} else {
 		addInfo.style.display = 'block';
 		btn.innerHTML = "Hide Additional Items";
-		eduExpand=true;
+		eduExpand = true;
 	}
+}
+
+function expHoverDisplay(targetClass) {
+
+	$(targetClass).map( function() {
+		var curr = $(this).data('toggle');
+		$(this).hover(
+			function() {
+				showAndHide(curr);
+			}
+		);
+	});
 }
 
 // function expand() {
@@ -38,4 +55,20 @@ function expand() {
 // 	    //});
 // 	});
 // }
+
+/* Ajax prep */
+function ajaxExpLoad(dest, selector) {
+	event.preventDefault();
+ 
+   	$.ajax({
+   		url: "supplement.html", 
+      	success: function(data) {
+        	$(dest).append($(data).find(selector));
+        	console.log('The text has successfully loaded');
+      	},
+      	error: function() {
+        	console.log('An error occurred while loading the text');
+      	}
+   	});
+};
 
